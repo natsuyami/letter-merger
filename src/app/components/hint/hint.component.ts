@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HINTS } from 'src/app/data/hints';
 
 @Component({
   selector: 'app-hint',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HintComponent implements OnInit {
 
+  hints = HINTS;
+  
   constructor() { }
 
   ngOnInit() {

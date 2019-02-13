@@ -1,14 +1,21 @@
-<section layout="column" layout-align="space-between center">
-  <div class="full-width-cons">
-    <app-crossword></app-crossword>
-  </div>
-  <div class="full-width-cons">
-    <app-letter></app-letter>
-  </div>
-  <div class="full-width-cons">
-    <app-guess></app-guess>
-  </div>
-  <div class="full-width-cons">
-    <app-hint></app-hint>
-  </div>
+<section class="full-width-cons">
+  <mat-grid-list class="crossword-sec" cols="2" rowHeight="500px" gutterSize="0px">
+    <mat-grid-tile colspan="1">
+      <app-crossword></app-crossword>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" class="hint-sec">
+      <div layout="column" layout-align="center start">
+        <h2>Hints:</h2>
+        <app-hint></app-hint>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="5" rowHeight="2:1" gutterSize="0px">
+      <mat-grid-tile colspan="2" class="guess-sec">
+          <app-guess></app-guess>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="3" class="letter-sec">
+          <app-letter></app-letter>
+        </mat-grid-tile>
+  </mat-grid-list>
 </section>

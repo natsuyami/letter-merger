@@ -1,3 +1,5 @@
-<p>
-  hint works!
-</p>
+<mat-selection-list #shoes>
+  <mat-list-item *ngFor="let hint of hints">
+    {{hint.hint}}
+  </mat-list-item>
+</mat-selection-list>

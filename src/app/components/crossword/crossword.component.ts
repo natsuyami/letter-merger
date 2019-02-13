@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CROSSWORDS } from 'src/app/data/crosswords';
 
 @Component({
   selector: 'app-crossword',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crossword.component.scss']
 })
 export class CrosswordComponent implements OnInit {
+
+  crosswords = CROSSWORDS;
 
   constructor() { }
 

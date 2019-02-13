@@ -1,11 +1,6 @@
-<div layout="row" layout-align="space-between center">
-  <input type="text" placeholder="" value=""/>
-  <input type="text" placeholder="" value=""/>
-  <input type="text" placeholder="" value=""/>
-  <input type="text" placeholder="" value=""/>
-  <input type="text" placeholder="" value=""/>
-  <input type="text" placeholder="" value=""/>
-  <input type="text" placeholder="" value=""/>
-</div>
-
+<table class="crossword" id="cWord" *ngIf="crosswords">
+  <tr id="one" *ngFor="let crossword of crosswords">
+    <td *ngFor="let letter of crossword.word" [class.hide-td]="letter === ' '">{{letter}}</td>
+  </tr>
+</table>
 
