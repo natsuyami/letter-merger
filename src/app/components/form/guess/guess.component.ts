@@ -14,6 +14,8 @@ export class GuessComponent implements OnInit {
     guessWord: new FormControl('')
   });
 
+  Total:number = 0
+
   constructor() { }
 
   ngOnInit() {
@@ -27,15 +29,12 @@ export class GuessComponent implements OnInit {
     const word_length = Number(key[3]);
 
     let v=1;
-    console.log(key);
     if(key.length > 0){
       if(lining == 'H'){
         coord.x = coord.x - 1;
         for(let a=0; a < word_length; a++){
           const elem_id = ((coord.x+v)+""+coord.y).toString();
           document.getElementById(elem_id).classList.add('show-td');
-
-          console.log(document.getElementById(((coord.x+v)+""+coord.y).toString()));
           v++;
         }
       }else{
@@ -43,13 +42,25 @@ export class GuessComponent implements OnInit {
         for(let a=0; a < word_length; a++){
           const elem_id = (coord.x+""+(coord.y+v)).toString();
           document.getElementById(elem_id).classList.add('show-td');
-
-          console.log(document.getElementById((coord.x+""+(coord.y+v)).toString()));
           v++;
         }
       }
+
+      this.Total++;
+      v=0;
+
+      if(this.Total == 7){
+        setTimeout(()=>{
+          alert("HAPPY VALENTINE'S DAY TO US, MORE VALENTINE'S DAY TO COME :3");
+        }, 200);
+      }
+
+      this.guessForm = new FormGroup({
+        guessWord: new FormControl('')
+      });
+    }else{
+      alert("Incorrect Word Honey :*");
     }
-    v=0;
   }
 }
 
