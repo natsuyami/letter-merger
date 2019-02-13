@@ -58,6 +58,7 @@ table.crossword{
             border:none;
         }
         .show-td{
+            @include transition-btn(background-color 0.3s ease);
             background: transparent;
             color: $std-color;
         }
@@ -159,6 +160,17 @@ input.guess{
     &::placeholder{
         color: $white-color;
     }
+}
+
+.letter-choice{
+    padding:10px 15px;
+    div{
+        @extend %header-shared;
+        padding: 5px 10px;
+        border: 2px solid $white-color;
+        display: inline-block;
+    }
+    
 }
 
 %btn-shared {

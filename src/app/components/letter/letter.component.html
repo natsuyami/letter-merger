@@ -1,3 +1,3 @@
-<div>
-    <div></div>
+<div class="letter-choice" *ngIf="letter">
+    <div *ngFor="let char Of letter">{{char}}</div>
 </div>

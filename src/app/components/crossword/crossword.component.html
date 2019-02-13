@@ -1,6 +1,6 @@
 <table class="crossword" id="cWord" *ngIf="crosswords">
-  <tr id="one" *ngFor="let crossword of crosswords">
-    <td *ngFor="let letter of crossword.word" [class.hide-td]="letter === ' '">{{letter}}</td>
+  <tr *ngFor="let crossword of crosswords; let i = index">
+    <td *ngFor="let letter of crossword.word; let j = index" [attr.id]="j+''+i" [class.hide-td]="letter === ' '">{{letter}}</td>
   </tr>
 </table>
 

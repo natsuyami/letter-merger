@@ -1,4 +1,4 @@
-<form class="form-vertical" layout="column" layout-align="center center">
-  <input type="text" class="guess" placeholder="Enter Word" value="" />
+<form class="form-vertical" [formGroup]="guessForm" (ngSubmit)="onSubmit()" layout="column" layout-align="center center">
+  <input type="text" class="guess" placeholder="Enter Word" value="" formControlName="guessWord"/>
   <input type="submit" class="submit-btn" value="Submit" />
 </form>

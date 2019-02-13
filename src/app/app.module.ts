@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import {MatNativeDateModule} from '@angular/material';
 import {MaterialModule} from './material-module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HintComponent } from './components/hint/hint.component';
@@ -28,7 +29,9 @@ import { CrosswordComponent } from './components/crossword/crossword.component';
   imports: [
     BrowserModule,
     MaterialModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
