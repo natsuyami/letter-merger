@@ -51,7 +51,7 @@ export class GuessComponent implements OnInit {
 
       if(this.Total == 7){
         setTimeout(()=>{
-          alert("HAPPY VALENTINE'S DAY TO US, MORE VALENTINE'S DAY TO COME :3");
+          alert("HAPPY VALENTINE'S DAY TO US, MORE VALENTINE'S DAY TO COME :3 PERO SINGLE KA PA RIN SA FB HAHAHAHA");
         }, 200);
       }
 
